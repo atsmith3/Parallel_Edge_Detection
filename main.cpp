@@ -141,13 +141,13 @@ int main(int argc, char* argv[]) {
             if(convolveParallel(*input, *output) == true) {
                 std::cout<< "First Pass Complete\n";
             }
-
+            /*
             delete input;
             input = new PNG(*output);
 
             if(convolveParallel(*input, *output) == true) {
                 std::cout << "Second Pass Complete\n";
-            } 
+            }*/ 
         }
     }
     // Else run in serial:
@@ -156,13 +156,13 @@ int main(int argc, char* argv[]) {
         if(convolveSerial(*input, *output) == true) {
             std::cout << "First Pass Complete\n";
         }
-        
+        /*
         delete input;
         input = new PNG(*output);
 
         if(convolveSerial(*input, *output) == true) {
             std::cout << "second Pass Complete\n";
-        }
+        }*/
     }
     // Write the png to the file:
     output->writeToFile("output.png");
